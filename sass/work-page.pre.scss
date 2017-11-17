@@ -1,0 +1,76 @@
+.work-page, .visit-page {
+  .userDtail {
+    .baseInfo {
+      padding: 0.3rem 0.3rem 0.3rem 1.56rem;
+
+      .avatar {
+        left: 0.3rem;
+      }
+
+      .name {
+        font-size: 15px;
+        margin-bottom: 0.18rem;
+      }
+
+      .info {
+        font-size: 12px;
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+
+    .desc {
+      padding: 0.24rem 0.3rem;
+      @include opacityBorder(all, 8);
+    }
+
+    .textDesc {
+      padding: 0.3rem 0.4rem;
+
+      & + .local {
+        @include opacityBorder(top, 8);
+      }
+
+      textarea {
+        width: 100%;
+        color: #fff;
+        background: none;
+        border: none;
+
+        &::-webkit-input-placeholder {
+          color: rgba(255, 255, 255, .6);
+          font-size: 14px;
+        }
+      }
+    }
+
+    .local {
+      padding: 0.26rem 0.3rem;
+      opacity: .8;
+      font-size: 12px;
+
+      .del {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+        background: #6b7096;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.work-page .userDtail .local:before,
+.visit-page .userDtail .local:before,
+i.ico-local {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+  background: url(../images/pin.png) no-repeat center center;
+  background-size: 13px auto;
+  margin: -2px 5px 0 0;
+}

@@ -1,0 +1,224 @@
+.task-page {
+
+  .filterList {
+    margin-bottom: 0.1rem;
+  }
+  
+  .switch-content {
+    padding-top: 0.1rem;
+
+    .switch-item {
+      display: none;
+    }
+  }
+
+  .bank-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 3.3rem;
+      margin: 0.1rem 0.1rem;
+      padding: 0.28rem 0;
+      text-align: center;
+      background: #25476d url(../images/wave.png) no-repeat 0 bottom;
+      background-size: 100% auto;
+
+      &:active {
+        color: $fcBlue;
+      }
+    }
+
+  }
+
+  .fmList, .mcList {
+    padding: 0.1rem 0 0.2rem;
+  }
+
+  .mcList {
+    .item {
+      color: #d0d2e2;
+      
+      & + .item {
+        margin-top: 0.2rem;
+      }
+
+      .area {
+        padding: 0.2rem 0.4rem;
+
+        &.timeLine {
+          padding: 0.2rem 0.2rem 0.2rem 1.9rem;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            background-color: #dcdcdc;
+            opacity: .1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 1.58rem;
+            -z-index: 9;
+          }
+
+          .card {
+            background-color: rgba(66, 87, 133, .4);
+            padding: 0.2rem;
+
+            & + .card {
+              margin-top: 0.2rem;
+            }
+
+            &:before {
+              content: "";
+              display: block;
+              height: 0;
+              width: 0;
+              border: 6px solid transparent;
+              border-color: transparent rgba(66, 87, 133, .4) transparent transparent;
+              position: absolute;
+              left: -12px;
+              margin-top: -6px;
+              top: 0.6rem;
+            }
+
+            &:after {
+              content: "";
+              display: block;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              background-color: #38d1f5;
+              position: absolute;
+              margin-top: -4px;
+              margin-left: -4px;
+              left: -0.32rem;
+              top: 0.6rem;
+            }
+
+            .editor {
+              text-align: center;
+              height: 1.2rem;
+              width: 1.2rem;
+              line-height: 1.2rem;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, .1);
+              font-size: 14px;
+              position: absolute;
+              margin-top: -0.6rem;
+              top: 0.6rem;
+              left: -1.8rem;
+
+              .ago {
+                line-height: 2;
+                position: absolute;
+                left: 0;
+                top: 1.2rem;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .control-fixed {
+    height: 0.98rem;
+    width: 100%;
+
+    .inner {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0.98rem;
+      line-height: 0.98rem;
+      text-align: center;
+      background-color: #324672;
+      color: #77e1fa;
+
+      .allow {
+        background-color: #11b7de;
+        color: #fff;
+      }
+    }
+  }
+
+  .approvalBox {
+    width: 6.4rem;
+    height: 4.68rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -2.34rem 0 0 -3.2rem;
+    background-image: -webkit-linear-gradient(135deg,#373469,#25486b);
+    border-radius: 0.08rem;
+    padding: 0.2rem;
+
+    .title {
+      text-align: center;
+      padding: 0.1rem 0 0.2rem;
+    }
+
+    .textArea {
+      padding: 0.1rem;
+      @include bgWhiteOpacity(10);
+
+      textarea {
+        width: 100%;
+        height: 1.86rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 13px;
+
+        &::-webkit-input-placeholder {
+          color: rgba(255, 255, 255, .3);
+        }
+      }
+    }
+
+    .ctrBtnGrp {
+      text-align: center;
+      padding: 0.4rem 0;
+
+      .base-btn {
+        display: inline-block;
+        margin: 0;
+        width: auto;
+        font-size: 14px;
+        padding: 0.24rem 0.5rem;
+      }
+    }
+
+    i.close {
+      height: 0.46rem;
+      width: 0.46rem;
+      background: rgba(255, 255, 255, .1) url(../images/close.png) no-repeat center center;
+      background-size: 0.2rem auto;
+      display: block;
+      position: absolute;
+      right: 0.2rem;
+      top: 0.2rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.task-page, .machine-page, .visit-page {
+  .tabFixedWrap {
+    height: 0.88rem;
+
+    .tabs {
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99;
+      background-color: rgba(41, 50, 97, .8);
+    }
+  }
+}

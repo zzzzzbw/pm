@@ -1,0 +1,194 @@
+.company-page {
+  opacity:0.8;
+
+  .plana{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  	font-size:16px;
+  }
+
+  .bianju {
+    padding:0.34rem 0 0.34rem 0.27rem;
+  }
+
+  .searchLabels {
+  	padding: 0.3rem;
+
+  	.labelItem + .labelItem {
+  	  margin-top: 0.2rem;
+  	}
+  }
+
+  .findk {
+    display:inline-block;
+    background-color: #38406e;
+    // margin: 0.2rem 0 0 0.3rem;
+    line-height: 0.5rem;
+    padding: 0.1rem 0.2rem;
+
+  }
+  i {
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: url(../images/hot_ico.png) no-repeat;
+    background-size: 100% auto;
+    // position: absolute;
+    // left: 0.3rem;
+    // top: 50%;
+  }
+
+  .helperI {
+    i {
+      height: 0.5rem;
+      width: 0.5rem;
+      background: url(../images/helper1_ico.png) no-repeat;
+      background-size: 200% auto;
+      vertical-align: middle;
+      margin-right:0.1rem;
+      &.b {
+        background-position:100% 0;
+      }
+      &.c {
+        background-position:0 25%;
+      }
+      &.d {
+        background-position:100% 25%;
+      }
+      &.e {
+        background-position:0 50%;
+      }
+      &.f {
+        background-position:100% 50%;
+      }
+
+    }
+  }
+
+  .adjust-cell {
+    padding-left: 0.2rem;
+    line-height: 0.5rem;
+  }
+
+  .adjust-row {
+    padding: 0.2rem 0;
+    & + .adjust-row {
+      border-top: 1px solid rgba(119, 225, 250, .1);
+    }
+  }
+
+  .helperCode {
+    padding: 0.2rem 0 0.2rem 0.2rem;
+    background-color:rgba(255,255,255,.1);
+  } 
+
+  .helperTable {
+    width: 100%;
+    td {
+      width: 100px;
+      padding: 0.1rem;  
+    }
+  }
+  .round-pd0 {
+    padding:0;
+  }
+  .helperContent {
+    i {
+      background: url(../images/helper_ico.png) no-repeat;
+      background-size: 400% auto;
+
+      &.b {
+        background-position: 33.33333% 0;
+      }
+      &.c {
+        background-position: 66.66666% 0;
+      }
+      &.d {
+        background-position: 100% 0;
+      }
+      &.e {
+        background-position: 0 25%;
+      }
+      &.f {
+        background-position: 33.33333% 25%;
+      }
+      &.g {
+        background-position: 66.66666% 25%;
+      }
+      &.h {
+        background-position: 100% 25%;
+      }
+      &.i {
+        background-position: 0 50%;
+      }
+      &.j {
+        background-position: 33.33333% 50%;
+      }
+      &.k {
+        background-position: 66.66666% 50%;
+      }
+      &.l {
+        background-position: 100% 50%;
+      }
+      &.m {
+        background-position: 0 75%;
+      }
+      &.n {
+        background-position: 33.33333% 75%;
+      }
+      &.o {
+        background-position: 66.66666% 75%;
+      }
+      &.p {
+        background-position: 100% 75%;
+      }
+      &.q {
+        background-position: 0 100%;
+      }
+
+      &.active {
+        background-image: url(../images/helper_icon.png);
+      }
+    }
+  }
+
+  .phone {
+    i {
+      background: url(../images/cus_info_ico.png) no-repeat;
+      background-size: 100% auto;
+      vertical-align:middle;
+      // margin-right:0.2rem;
+      &.call {
+        background-position: 0 100%;
+      }
+    }
+  }
+  .goldIco {
+    i {
+      display: inline-block;
+      height: 0.4rem;
+      width: 0.4rem;
+      background: url(../images/calendar.png) no-repeat;
+      background-size: 100% auto;
+      vertical-align: sub;
+    
+      &.b {
+        background: url(../images/calendar_right.png)  center center no-repeat;
+        background-size: 150% auto;
+      }
+      &.c {
+        background: url(../images/gold.png)  center center no-repeat;
+        background-size: 100% auto;
+        margin-right:0.1rem;
+      }
+    }
+  }
+  .dsj {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+    margin-left:0.1rem;
+  }
+}

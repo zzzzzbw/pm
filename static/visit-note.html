@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="visit-page">
+			<div class="filterList">
+				<div class="title">拜访类型</div>
+				<ul class="col4">
+					<li class="active">陌生拜访</li>
+					<li>意向</li>
+					<li>转化</li>
+					<li>日常</li>
+					<li>贷后</li>
+				</ul>
+			</div>
+			<div class="userDtail">
+				<div class="area textDesc">
+					<textarea rows="10" placeholder="记录今日工作 400字以内" id="userText"></textarea>
+				</div>
+				<div class="area shot-add">
+					<ul class="inlineBox">
+                        <li><div class="screenShot"><img src="../images/screenShot.png" alt=""></div> <span class="close"></span></li>
+                        <li><div class="screenShot"><img src="../images/screenShot.png" alt=""></div> <span class="close"></span></li>
+                        <li><div class="screenShot"><img src="../images/screenShot.png" alt=""></div> <span class="close"></span></li>
+					</ul>
+					<div class="addBtn"></div>
+				</div>
+				<div class="area cusPhone">
+					<div class="row">
+						<div class="label">客户电话：</div>
+						<div class="ipt cell">
+							<input type="text" value="" placeholder="请输入客户电话号码">
+						</div>
+					</div>
+				</div>
+				<div class="area local">
+					<span>上塘街道科园路968号天瑞国际 <span class="fc-yellow">（超距）</span></span>
+					<div class="del">×</div>
+				</div>
+				<div class="area records">
+					<div class="list">
+						<div class="item row">
+							<i class="visit-type-ico a"></i>
+							<div class="cell">电话记录</div>
+							<div class="time">2017-10-10 12:23</div>
+						</div>
+						<div class="item row">
+							<i class="visit-type-ico b"></i>
+							<div class="cell">现场拜访</div>
+							<div class="time">2017-10-10 12:23</div>
+						</div>
+						<div class="item row">
+							<i class="visit-type-ico a"></i>
+							<div class="cell">电话记录</div>
+							<div class="time">2017-10-10 12:23</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
+			$('.filterList li').on('click', function () {
+				$(this).addClass('active').siblings().removeClass('active')
+				if ($(this).text() === '贷后') {
+					$('#userText').attr('placeholder', '现场走访后请在PC端完成全部贷后检查作业')
+				} else {
+					$('#userText').attr('placeholder', '记录今日工作 400字以内')
+				}
+			})
+		})
+	</script>
+</body>
+</html>

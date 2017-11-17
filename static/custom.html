@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="mine-page">
+			<div class="area list">
+				<div class="item">
+          <i class="g"></i>
+          <div class="grpTitle">
+            <span>大额变动参数设置</span>
+            <div class="switchRadio checked"></div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="i"></i>
+          <div class="grpTitle">
+            <span>对公客户资金变动</span>
+          </div>
+          <div class="rangeMount">
+            <div class="label">最低变动金额</div>
+            <div class="rangeInput">
+              <b class="add"></b>
+              <div class="ipt"><input type="text" value="100,000.00"></div>
+              <b class="sub"></b>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="j"></i>
+          <div class="grpTitle">
+            <span>个人客户资金变动</span>
+          </div>
+          <div class="rangeMount">
+            <div class="label">最低变动金额</div>
+            <div class="rangeInput">
+              <b class="add"></b>
+              <div class="ipt"><input type="text" value="100,000.00"></div>
+              <b class="sub"></b>
+            </div>
+          </div>
+        </div>
+				<div class="item">
+          <i class="h"></i>
+          <div class="grpTitle">
+            <span>生日提醒参数设置</span>
+            <div class="switchRadio checked"></div>
+          </div>
+          <div class="list sub">
+            <div class="item">个人客户推送生日提醒</div>
+            <div class="item row arr">
+              <div class="cell">最低客户等级：</div>
+              <div class="fc-yellow">AI级</div>
+            </div>
+            <div class="item row arr">
+              <div class="cell">提前推送天数：</div>
+              <div class="fc-yellow">3天</div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
+			$('.item.fold').on('click', function () {
+				var isOpen = $(this).hasClass('open');
+				isOpen ? $(this).removeClass('open') : $(this).addClass('open')
+			})
+		})
+	</script>
+</body>
+</html>

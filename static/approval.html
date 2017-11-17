@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="info-page">
+			<div class="row area approvPanel">
+				<div class="cell active">
+					<i class="a"></i>
+					<p>进入审批</p>
+				</div>
+				<div class="cell">
+					<i class="b"></i>
+					<p>总行审批</p>
+				</div>
+				<div class="cell">
+					<i class="c"></i>
+					<p>审批完成</p>
+				</div>
+				<div class="cell">
+					<i class="d"></i>
+					<p>审批退回</p>
+				</div>
+			</div>
+			<div class="mcList">
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">进入审批</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">[608990]主办客户合同审批如下：陈澍[668089290]贷款合同[6680892900005689896]</div>
+						<div class="control">
+							<div class="inner">
+								<div class="read">标记为已读</div>
+								<div class="del">删除</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">进入审批</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">[608990]主办客户合同审批如下：陈澍[668089290]贷款合同[6680892900005689896]</div>
+						<div class="control">
+							<div class="inner">
+								<div class="read">标记为已读</div>
+								<div class="del">删除</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">进入审批</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">[608990]主办客户合同审批如下：陈澍[668089290]贷款合同[6680892900005689896]</div>
+						<div class="control">
+							<div class="inner">
+								<div class="read">标记为已读</div>
+								<div class="del">删除</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">进入审批</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">[608990]主办客户合同审批如下：陈澍[668089290]贷款合同[6680892900005689896]</div>
+						<div class="control">
+							<div class="inner">
+								<div class="read">标记为已读</div>
+								<div class="del">删除</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/slide-deleter.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		var config = {
+			sliderName: '.area',
+			controlName: '.control',
+			fnButtonName: '.read',
+			delButtonName: '.del'
+		}
+		$('.mcList .item').each(function (i, el) {
+			new slideDeleter(el, $.extend({}, config, {
+				fn: function (btn, item) {
+					var titClassList = item.querySelector('.tit').classList;
+					if (titClassList.contains('read')) {
+						titClassList.remove('read');
+						btn.innerText = '标记为已读';
+					} else {
+						titClassList.add('read');
+						btn.innerText = '标记为未读';
+					}
+				},
+				delete: function () {
+					alert(`删除了第${i+1}个节点`)
+				}
+			}))
+		})
+
+		// 菜单切换
+		$('.approvPanel .cell').on('click', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+
+	})
+	</script>
+</body>
+</html>

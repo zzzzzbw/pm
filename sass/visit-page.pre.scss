@@ -1,0 +1,138 @@
+.visit-page {
+  .cusPhone {
+    padding: 0.3rem;
+  }
+
+  .records {
+    .time {
+      opacity: .6;
+      font-size: 12px;
+    }
+
+    .list .item {
+      padding: 0.4rem 0.3rem 0.4rem 1.2rem;
+    }
+  }
+
+  .card-title {
+    @include bgBlueOpacity(14);
+
+    .level {
+      opacity: .6;
+      font-size: 13px;
+    }
+
+    .visit-label {
+      color: #71eef0;
+      font-size: 0.12rem;
+      padding: 0.06rem 0.1rem;
+      border: 1px solid #71eef0;
+      margin: 0 0.08rem;
+    }
+  }
+
+  .area.user {
+    padding-left: 1.4rem;
+
+    .avatar {
+      left: 0.2rem;
+    }
+
+    .info .name {
+      padding-bottom: 0.06rem;
+    }
+  }
+
+  .visit-type-title {
+    padding: 0.4rem 0.3rem 0.4rem 1.2rem;
+    @include bgWhiteOpacity(10);
+  }
+  
+  .userList {
+    margin-bottom: 0.3rem;
+  }
+
+  .searchFilter {
+    height: 1.24rem;
+    
+    .inner {
+      width: 100%;
+      padding: 0.3rem 0.16rem;
+      position: fixed;
+      left: 0;
+      top: 0.88rem;
+      background-color: rgba(10, 24, 75, 0.96);
+      z-index: 99;
+  
+      .searchIpt {
+        padding: 2px 0;
+  
+        input {
+          text-align: left;
+          &::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, .3);
+          }
+        }
+      }
+      
+      .cancel {
+        padding: 2px 0.2rem;
+        line-height: 0.6rem;
+        display: none;
+      }
+      
+      .calendar {
+        line-height: 0.6rem;
+        padding: 1px 1px 1px 0.76rem;
+        background: url(../images/calendar.png) no-repeat 0.16rem center;
+        background-size: 0.42rem;
+        overflow: hidden;
+        width: 4.56rem;
+        transition: width .3s linear;
+  
+        .gap {
+          width: 0.3rem;
+          text-align: center;
+          display: block;
+        }
+  
+        .ipt {
+          @include opacityBorder(all, 10);
+          font-size: 12px;
+          padding: 0 0.08rem;
+          transition: opacity .3s;
+  
+          input {
+            text-align: center;
+            width: 1.5rem;
+            height: 0.6rem;
+          }
+        }
+  
+        &.ellipsis {
+          width: 0.76rem;
+  
+          .ipt {
+            opacity: 0;
+          }        
+        }
+      }
+    }
+  }
+
+  .orderFilterGroup {
+    position: fixed;
+
+    .itemsBox .filterList {
+      padding: 0.2rem;
+    }
+
+    &.show {
+      top: 2.12rem;
+    }
+  }
+
+  .refreshBtn {
+    padding: 0 0.3rem 0;
+  }
+}

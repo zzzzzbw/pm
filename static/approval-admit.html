@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="info-page">
+			<div class="row area approvPanel inline">
+				<div class="cell active">
+					<i class="f"></i>
+					<span>公司授信</span>
+				</div>
+				<div class="cell">
+					<i class="e"></i>
+					<span>审批中合同</span>
+				</div>
+			</div>
+			<div class="mcList">
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">公司授信</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">北京天地华泰采矿工程技术有限公司</div>
+						<div class="row detail">合同号：129C1102016000004</div>
+						<div class="row detail">
+							<span class="fc-yellow">金额：<span class="ft16">8,696.00</span> 万元</span>
+						</div>
+						<div class="row detail">杭州银行北京分行营业部</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">公司授信</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">北京天地华泰采矿工程技术有限公司</div>
+						<div class="row detail">合同号：129C1102016000004</div>
+						<div class="row detail">
+							<span class="fc-yellow">金额：<span class="ft16">8,696.00</span> 万元</span>
+						</div>
+						<div class="row detail">杭州银行北京分行营业部</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="area">
+						<div class="row">
+							<div class="cell tit">公司授信</div>
+							<div class="time">2017-02-03 08:26</div>
+						</div>
+						<div class="row detail">北京天地华泰采矿工程技术有限公司</div>
+						<div class="row detail">合同号：129C1102016000004</div>
+						<div class="row detail">
+							<span class="fc-yellow">金额：<span class="ft16">8,696.00</span> 万元</span>
+						</div>
+						<div class="row detail">杭州银行北京分行营业部</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function () {
+		// 菜单切换
+		$('.approvPanel .cell').on('click', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+
+	})
+	</script>
+</body>
+</html>

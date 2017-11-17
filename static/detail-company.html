@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/echarts.simple.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="info-page" style="background-image: url(../images/fage.png); background-size: 1.6rem auto;">
+			<div class="userItemsPanel">
+				<div class="tt row">
+					<div class="cell">
+						<span>杭州高盛文化用品有限公司</span>
+						<span class="ft13">(06568949)</span>
+					</div>
+					<div class="level">小企业客户</div>
+				</div>
+				<div class="swiper-wrap">
+					<div class="swiper" id="slider">
+						<div class="row timeoutPanel">
+							<div class="cell">
+								<i class="a"></i>
+								<p>贵宾卡</p>
+							</div>
+							<div class="cell">
+								<i class="b"></i>
+								<p>定期到期</p>
+							</div>
+							<div class="cell">
+								<i class="c"></i>
+								<p>定存达人</p>
+							</div>
+							<div class="cell">
+								<i class="d"></i>
+								<p>贷款大户</p>
+							</div>
+						</div>
+						<div class="row timeoutPanel">
+							<div class="cell">
+								<i class="a"></i>
+								<p>贵宾卡</p>
+							</div>
+							<div class="cell">
+								<i class="b"></i>
+								<p>定期到期</p>
+							</div>
+							<div class="cell">
+								<i class="c"></i>
+								<p>定存达人</p>
+							</div>
+							<div class="cell">
+								<i class="d"></i>
+								<p>贷款大户</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="area mayLike">
+				<div class="tt">TA可能感兴趣的产品</div>
+				<div class="proList">
+					<div class="item">
+						<i class="ico b"></i>
+						<div class="row">
+							<div class="cell">丰裕一号288号60天丰裕一号288号60天</div>
+							<div>2017.01.23-2018.01.23</div>
+						</div>
+						<div class="row">
+							<div class="cell">收益率：<span class="fc-yellow">3.62%</span></div>
+							<div>起购金额：5万</div>
+						</div>
+					</div>
+					<div class="item">
+						<i class="ico c"></i>
+						<div class="row">
+							<div class="cell">丰裕一号288号60天</div>
+							<div>2017.01.23-2018.01.23</div>
+						</div>
+						<div class="row">
+							<div class="cell">收益率：<span class="fc-yellow">3.62%</span></div>
+							<div>起购金额：5万</div>
+						</div>
+					</div>
+					<div class="item">
+						<i class="ico d"></i>
+						<div class="row">
+							<div class="cell">丰裕一号288号60天</div>
+							<div>2017.01.23-2018.01.23</div>
+						</div>
+						<div class="row">
+							<div class="cell">收益率：<span class="fc-yellow">3.62%</span></div>
+							<div>起购金额：5万</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="area assets">
+				<div class="scan">
+					<p class="tt">资产总额 (万)</p>
+					<p class="count">29,567.00</p>
+				</div>
+				<div class="detailCircle">
+					<ul class="labels" id="labels-circle1">
+						<li><i></i>存款余额：20,000.00 (万)</li>
+						<li><i></i>理财余额：9,567.00 (万)</li>
+					</ul>
+					<div class="circle" id="circle1"></div>
+				</div>
+			</div>
+			<div class="area assets">
+				<div class="scan">
+					<p class="tt">贷款总额 (万)</p>
+					<p class="count">29,567.00</p>
+				</div>
+				<div class="detailCircle">
+					<ul class="labels" id="labels-circle2">
+						<li><i></i>个人经营性贷款：20,000.00 (万)</li>
+						<li><i></i>个人消费性贷款：9,567.00(万)</li>
+					</ul>
+					<div class="circle" id="circle2"></div>
+				</div>
+			</div>
+			<div class="area trend">
+					<p class="tt">总资产趋势</p>
+				<div class="lineChart" id="lineChart"></div>
+				<div class="lineLabels">
+					<div class="item"><i style="background-color: #6ffffd;"></i>存款余额</div>
+					<div class="item"><i style="background-color: #69b0ff;"></i>理财余额</div>
+					<div class="item"><i style="background-color: #ffdc52;"></i>贷款余额</div>
+				</div>
+			</div>
+			<div class="area trend">
+				<div class="tt row">
+					<div class="cell">客户详情</div>
+					<div class="fc-blue"><i class="to-visit"></i> 拜访</div>
+				</div>
+				<div class="userInfoList">
+					<div class="row">
+						<div>工作地址：</div>
+						<div class="cell">拱墅区科院路666号拱墅区科院路666号拱墅区科院路666号</div>
+						<i class="local"></i>
+					</div>
+					<div class="row">
+						<div>邮寄地址：</div>
+						<div class="cell">拱墅区科院路666号</div>
+						<i class="local"></i>
+					</div>
+					<div class="row">
+						<div>客户规模：</div>
+						<div class="cell">中小型企业</div>
+					</div>
+					<div class="row">
+						<div>联系电话：</div>
+						<div class="cell">0571-08965263</div>
+						<i class="phone"></i>
+					</div>
+				</div>
+			</div>
+			<div class="area trend">
+				<div class="tt">近三月欠款欠息详情</div>
+				<div class="debtList">
+					<div class="item active">
+						<div class="tit">合同编号：9P562586124df230</div>
+						<div class="detailWrap">
+							<div class="detailList">
+								<div class="group">
+									<div class="row fc-yellow">借据编号：9P562586124df230</div>
+									<div class="row">欠款金额：23,169.00万</div>
+									<div class="row">欠息金额：0.36万</div>
+								</div>
+								<div class="group">
+									<div class="row fc-yellow">借据编号：9P562586124df230</div>
+									<div class="row">欠款金额：23,169.00万</div>
+									<div class="row">欠息金额：0.36万</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="tit">合同编号：9P562586124df230</div>
+						<div class="detailWrap">
+							<div class="detailList">
+								<div class="group">
+									<div class="row fc-yellow">借据编号：9P562586124df230</div>
+									<div class="row">欠款金额：23,169.00万</div>
+									<div class="row">欠息金额：0.36万</div>
+								</div>
+								<div class="group">
+									<div class="row fc-yellow">借据编号：9P562586124df230</div>
+									<div class="row">欠款金额：23,169.00万</div>
+									<div class="row">欠息金额：0.36万</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="tit">合同编号：9P562586124df230</div>
+						<div class="detailWrap">
+							<div class="detailList">
+								<div class="group">
+									<div class="row fc-yellow">借据编号：9P562586124df230</div>
+									<div class="row">欠款金额：23,169.00万</div>
+									<div class="row">欠息金额：0.36万</div>
+								</div>
+								<div class="group">
+									<div class="row fc-yellow">借据编号：9P562586124df230</div>
+									<div class="row">欠款金额：23,169.00万</div>
+									<div class="row">欠息金额：0.36万</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="toTop" onclick="window.scrollTo(0, 0)"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function () {
+		// 初始化轮播
+		var slider = document.getElementById('slider');
+		new Swiper({
+			container: slider,
+			item: '.timeoutPanel',
+			observer: true,
+			autoplay: false,
+			duration: 500,
+			// onSwiped: function (i) {
+			// 	console.log(i)
+			// }
+		})
+
+		// 环形图参数设置
+		var setCircle = function (pie, labelIcons, params) {
+			var colors = [];
+			var datas = [];
+
+			params.forEach(function (e) {
+				colors.push(e.color)
+				datas.push({
+					value: e.value
+				})
+			})
+
+			Array.prototype.forEach.call(labelIcons, function (e, i) {
+				e.style.backgroundColor = colors[i]
+			})
+
+			var opt = {
+				color: colors,
+				series: [
+					{
+						type:'pie',
+						hoverAnimation: false,
+						radius: ['60%', '90%'],
+						label: {
+							normal: {
+								show: false,
+								position: 'center'
+							},
+							emphasis: {
+								show: false
+							}
+						},
+						labelLine: {
+							normal: {
+								show: false
+							}
+						},
+						data: datas
+					}
+				]
+			}
+			echarts.init(pie).setOption(opt)
+		}
+		// 初始化环形1
+		setCircle(document.getElementById('circle1'), document.querySelectorAll('#labels-circle1 i'), [{
+			color: '#6ffffd',
+			value: 935
+		}, {
+			color: '#69b0ff',
+			value: 310
+		}])
+
+		// 初始化环形2
+		setCircle(document.getElementById('circle2'), document.querySelectorAll('#labels-circle2 i'), [{
+			color: '#ffdc52',
+			value: 935
+		}, {
+			color: '#fffab0',
+			value: 310
+		}])
+
+		// 初始化折线图
+		echarts.init(document.getElementById('lineChart')).setOption({
+			grid: {
+				show: true,
+				backgroundColor: 'rgba(255, 255, 255, 0)',
+				borderWidth: 0,
+				left: 34,
+				right: 44,
+				top: 34,
+				bottom: 30
+			},
+			xAxis: [
+				{
+					name: '日期',
+					nameTextStyle: {
+						fontSize: 10,
+            color: 'rgba(255, 255, 255, 0.8)'
+          },
+					axisLine: {
+						onZero: false,
+						lineStyle: {
+							color: 'rgba(113, 244, 255, 0.1)'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							color: 'rgba(113, 244, 255, 0.06)'
+						}
+					},
+					axisTick: {
+						show: false
+					},
+					axisLabel: {
+						textStyle: {
+							color: 'rgba(255, 255, 255, 0.6)',
+							fontSize: 10
+						}
+					},
+					type: 'category',
+					boundaryGap: false,
+					data: ['01/05','02/05','03/05','04/05','05/05','06/05','07/05']
+				}
+			],
+			yAxis: [
+				{
+					scale: true,
+					name: '增值 (万)',
+					nameTextStyle: {
+						fontSize: 10,
+            color: 'rgba(255, 255, 255, 0.8)'
+          },
+					type: 'value',
+					splitLine: {
+						show: true,
+						lineStyle: {
+							color: 'rgba(113, 244, 255, 0.06)'
+						}
+					},
+					axisLine: {
+						lineStyle: {
+							color: 'rgba(113, 244, 255, 0.1)'
+						}
+					},
+					axisTick: {
+						show: false
+					},
+					axisLabel: {
+						textStyle: {
+							color: 'rgba(255, 255, 255, 0.6)',
+							fontSize: 10
+						}
+					}
+				}
+			],
+			series: [{
+				name:'存款余额',
+				type:'line',
+				showSymbol: false,
+				lineStyle:{
+					normal: {
+						width: 1,
+						color: '#6ffffd'
+					}
+				},
+				data: [10, 20, 18, 15, 19, 22, 21]
+			}, {
+				name:'理财余额',
+				type:'line',
+				showSymbol: false,
+				lineStyle:{
+					normal: {
+						width: 1,
+						color: '#69b0ff'
+					}
+				},
+				data: [9, 10, 11, 15, 12, 20, 20]
+			}, {
+				name:'理财余额',
+				type:'line',
+				showSymbol: false,
+				lineStyle:{
+					normal: {
+						width: 1,
+						color: '#ffdc52'
+					}
+				},
+				data: [13, 12, 11, 10, 9, 8, 6]
+			}]
+		})
+
+		// 切换显示
+		$('.debtList .item').on('click', function (ev) {
+			var item = $(this);
+			var wrap = item.find('.detailWrap');
+			var listHeight = wrap.find('.detailList').height() + 'px';
+			var isActive = item.hasClass('active');
+			if (ev.target.className === 'tit') {
+				if (isActive) {
+					item.removeClass('active');
+					wrap.css('height', 0);
+				} else {
+					item.addClass('active');
+					wrap.css('height', listHeight);
+				}
+			}
+		})
+
+	})
+	</script>
+</body>
+</html>
