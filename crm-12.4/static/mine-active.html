@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="mine-page">
+			<div class="area user">
+				<div class="avatar">
+					<!-- <img src="../images/human.png" alt="avatar"> -->
+					<img src="../images/man.png" alt="avatar">
+					<!-- <img src="../images/woman.png" alt="avatar"> -->
+				</div>
+				<div class="info">
+					<div class="base">
+						<span class="name">杭小航</span>
+						<!-- <span class="sex male">男</span> -->
+						<!-- <span class="sex female">女</span> -->
+					</div>
+					<div class="control">2458173465239500</div>
+				</div>
+			</div>
+			
+			<div class="area list2">
+				<div class="item2 arr">
+				    <div class="row"><i class="a sdf"></i>
+					    <div class="cell">资产查询</div>
+					    <button class="btn1">查询</button>
+				    </div>
+				    <div class="bt1show" style="display: none; padding: 0.2rem 0 ;" >
+                    <div class="row" style="margin:0.2rem 0;">
+				        <div class=" cell">活动期储蓄增量</div>
+				        <div>100.000.00（张）</div>
+			        </div>
+			        <div class="row">
+				        <div class=" cell">活动期储蓄增量</div>
+				        <div>100.000.00（张）</div>
+			        </div>
+			        </div>
+			    </div>	
+			</div>
+			<div class="area list2 row">
+				<div class="item2 arr cell"><i class="b"></i>累计已送券</div>
+				<div class="lianDong"></div>
+			</div>
+			<div class="area list2 row">
+				<div class="item2 arr cell"><i class="c"></i>本次可送券</div>
+				<div class="btn2">20（张）</div>
+			</div>
+			<div class="area list2 row">
+				<div class="item2 arr cell"><i class="d"></i>剩余可送券</div>
+				<div class="btn2">20（张）</div>
+			</div>
+            <div class="area list2 row">
+                <div class="item2 arr cell"><i class="e"></i>本次送券</div>
+                <div class="rangeInput adjust">
+                   <b class="sub"></b>
+                   <div class="ipt"><input type="text" value="20" style="width: 0.6rem"></div>
+                   <b class="add"></b>
+                </div>
+            </div>
+			<div class="btn-wrap">
+				<button class="base-btn quitBtn">退出登录</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
+			$(".btn1").click(function(){
+				$(".bt1show").show();
+			})
+		})
+	</script>
+</body>
+</html>

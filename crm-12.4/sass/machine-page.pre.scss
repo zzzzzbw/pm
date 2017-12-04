@@ -1,0 +1,250 @@
+.machine-page {
+  .switch-item {
+    display: none;
+    padding: 0.3rem 0;
+  }
+
+  .mcList {
+    .area {
+      padding: 0 0.2rem 0 0.64rem;
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        padding:0.3rem 0;
+        opacity:0.9;
+      }
+
+      td.toR {
+        text-align:right;
+      }
+    }
+
+    .calendar {
+        line-height: 0.6rem;
+        padding: 1px 1px 1px 0.76rem;
+        background: url(../images/calendar.png) no-repeat 0.16rem center;
+        background-size: 0.42rem;
+        overflow: hidden;
+        width: 4.56rem;
+        transition: width .3s linear;
+  
+        .gap {
+          width: 0.3rem;
+          text-align: center;
+          display: block;
+        }
+  
+        .ipt {
+          @include opacityBorder(all, 10);
+          font-size: 12px;
+          padding: 0 0.08rem;
+          transition: opacity .3s;
+  
+          input {
+            text-align: center;
+            width: 1.5rem;
+            height: 0.6rem;
+          }
+        }
+  
+        &.ellipsis {
+          width: 0.76rem;
+  
+          .ipt {
+            opacity: 0;
+          }        
+        }
+      }
+
+    .roundBtn {
+      height: 64px;
+      width: 64px;
+      position: absolute;
+      right: 0.2rem;
+      top: 50%;
+      margin-top: -32px;
+      padding: 4px;
+      border-radius: 100%;
+      @include bgWhiteOpacity(10);
+
+      &:after {
+        content: "未签到";
+        display: block;
+        text-align: center;
+        line-height: 56px;
+        font-size: 12px;
+        border-radius: 100%;
+        @include bgWhiteOpacity(10);
+      }
+
+      &.active {
+        &:after {
+          content: "已签到";
+          background-color: #38d1f5;
+        }
+      }
+    }
+  }
+
+  .setPanel {
+    padding: 0.2rem 0.3rem;
+
+    .mlBtn {
+      color: #77e1fa;
+      display: inline-block;
+      @include bgBlueOpacity(10);
+      padding: 0.1rem;
+      border: 1px solid rgba(119, 225, 250, .2);
+      font-size: 13px;
+
+      &:active {
+        @include bgBlueOpacity(20);
+      }
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        font-size: 13px;
+        vertical-align: middle;
+        background: url(../images/ml-ico.png) no-repeat;
+        background-size: 100% auto;
+        margin: -2px 4px 0 0;
+      }
+    }
+
+    i.ico-date {
+      margin: 0 0.1rem 0 0.12rem;
+    }
+    .gap {
+      margin: 0 0.1rem;
+    }
+
+    .ipt, .gap {
+      display: inline-block;
+    }
+
+    .ipt {
+      width: 1.74rem;
+      padding: 0.1rem;
+      border: 1px solid rgba(119, 225, 250, .1);
+
+      input {
+        text-align: center;
+        line-height: 20px;
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+
+  .timeTitle {
+    font-size: 15px;
+    color: $fcBlue;
+    padding: 0.2rem;
+  }
+
+  .timeLine {
+    padding-left: 1.5rem;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 1.3rem;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      @include bgWhiteOpacity(8);
+    }
+
+    .item {
+      padding: 0.3rem 0.2rem;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 8px;
+        width: 8px;
+        background-color: #38d1f5;
+        border-radius: 50%;
+        position: absolute;
+        left: -0.2rem;
+        top: 50%;
+        margin: -4px 0 0 -4px;
+      }
+
+      .t2 {
+        padding-top: 0.2rem;
+        opacity: .8;
+        font-size: 12px;
+      }
+
+      .time {
+        height: 20px;
+        line-height: 20px;
+        width: 1.2rem;
+        position: absolute;
+        text-align: center;
+        left: -1.5rem;
+        top: 50%;
+        margin-top: -10px;
+      }
+    }
+  }
+
+  .full-mask {
+    left: 200%;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity ease .3s;
+
+    &.show {
+      left: 0;
+      opacity: 1;
+
+      .sidebar {
+        transition: left ease .3s .2s;
+        visibility: visible;
+        left: 0;
+      }
+    }
+
+    .backLayer {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sidebar {
+      left: -6.18rem;
+      visibility: hidden;
+      width: 6.18rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: #2f3d6a;
+      background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(#373469), to(#25486b));
+
+      .scroller {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 1.18rem;
+        bottom: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .rankList {
+        .item {
+          background: none;
+          padding: 0.3rem 0.2rem 0.3rem 1rem
+        }
+      }
+    }
+  }
+}

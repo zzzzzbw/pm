@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="mine-page">
+			<div class="area user">
+				<div class="avatar">
+					<!-- <img src="../images/human.png" alt="avatar"> -->
+					<!-- <img src="../images/man.png" alt="avatar"> -->
+					<img src="../images/woman.png" alt="avatar">
+				</div>
+				<div class="info">
+					<div class="base">
+						<span class="name">杭小航</span>
+						<!-- <span class="sex male">男</span> -->
+						<span class="sex female">女</span>
+					</div>
+					<div class="control">操作员号：006500</div>
+				</div>
+			</div>
+			<div class="area list">
+				<div class="item"><i class="a"></i>总行营业部</div>
+				<div class="item"><i class="b"></i>总行营业部零售团队</div>
+				<div class="item fold"><i class="c"></i>客户经理、客户经理、客户经理、客户经理、客户经理、客户经理、客户经...客户经理、客户经理、客户经理、客户经理、客户经理、客户经理、客户经...客户经理、客户经理、客户经理、客户经理、客户经理、客户经理、客户经...客户经理、客户经理、客户经理、客户经理、客户经理、客户经理、客户经...客户经理、客户经理、客户经理</div>
+				<div class="item"><i class="d"></i>13989565236</div>
+			</div>
+			<div class="area list">
+				<div class="item arr"><i class="e"></i>机具管理</div>
+			</div>
+      <div class="area list">
+        <div class="item arr activeIco"><i class="f" style="background:url(../images/zbw.png) no-repeat; background-size: 100% auto; opacity: 0.8"></i>活动券</div>
+      </div>
+			<div class="btn-wrap">
+				<button class="base-btn quitBtn">退出登录</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
+            $('.item.fold').on('click', function () {
+				var isOpen = $(this).hasClass('open');
+				isOpen ? $(this).removeClass('open') : $(this).addClass('open')
+			})
+		})
+	</script>
+</body>
+</html>

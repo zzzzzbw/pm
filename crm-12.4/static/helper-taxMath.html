@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+<!-- <style>
+    .inbk {
+        padding: 0.15rem;
+        font-size: 5px;
+        border-radius: 2px;
+        display: inline-block;
+        background-color: rgba(255,255,255,.2);
+    }
+    .active2{
+        background-color:#6fc2e1;
+    }
+    .mathTip {
+        padding: 0.4rem 0.32rem;
+        opacity: 0.6;
+        font-size: 5px;
+    }
+    .bang {
+       width: 6rem;
+       margin: 0 auto;
+       border-radius: 3px;
+       position: fixed;
+       display: none;
+
+    }
+    .llTip {
+        background-color: #3b6689;
+    }
+    table {
+        width: 100%;
+    }
+    td {
+        padding: 0.1rem;
+        text-align: center;
+        width: 100px;
+    }
+    .year {
+        width: 4rem;
+        margin: 0 auto;
+        border-radius: 3px;
+        background-color: red;
+    }
+</style> -->
+</head>
+
+<body>
+    <div class="crm-wrap">
+        <div class="rank-page visit-page company-page" id="rankPage">
+            <div class="row tabs round-mgb20">
+                <div class="cell active">二手房</div>
+                <div class="cell ">新房</div>
+            </div>
+            <div class="helperPage">
+                <div class="area list">
+                    <div class="item">房屋类型</div>
+                    <div class="row item departByLine helperMathI">
+                        <div class="cell active"><i class="a"></i><p>普通住宅</p></div>
+                        <div class="cell"><i class="b"></i><p>非普通住宅</p></div>
+                        <div class="cell"><i class="c"></i><p>经济适用房</p></div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="model model2">
+                        <div class="area list ">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="cell">房屋建筑面积</div>
+                                    <div>平方</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="cell">房屋总价</div>
+                                    <div>万元</div>
+                                </div>
+                            </div>
+                            <div class="item pd20">
+                                <div class="row">
+                                    <div class="cell round-mt15">房产证年限</div>
+                                    <div>
+                                        <div class="inbk active2">年限<2</div>
+                                        <div class="inbk">2≤年限<5</div>
+                                        <div class="inbk">年限≥5</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item pd20">
+                                <div class="row">
+                                    <div class="cell round-mt15">买房家庭首次购房</div>
+                                    <div>
+                                        <div class="inbk active2">是</div>
+                                        <div class="inbk">否</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item pd20">
+                                <div class="row">
+                                    <div class="cell round-mt15">卖方家庭唯一住房</div>
+                                    <div>
+                                        <div class="inbk active2">是</div>
+                                        <div class="inbk">否</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area model2 hide">
+                        <div class="area list ">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="cell">房屋建筑面积</div>
+                                    <div>平方</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="cell">房屋总价</div>
+                                    <div>万元</div>
+                                </div>
+                            </div>
+                            <div class="item pd20">
+                                <div class="row">
+                                    <div class="cell round-mt15">房产证年限</div>
+                                    <div>
+                                        <div class="inbk active2">年限<2</div>
+                                        <div class="inbk">2≤年限<5</div>
+                                        <div class="inbk">年限≥5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area model2 hide">
+                        <div class="area list ">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="cell">房屋建筑面积</div>
+                                    <div>平方</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="cell">房屋总价</div>
+                                    <div>万元</div>
+                                </div>
+                            </div>
+                            <div class="item pd20">
+                                <div class="row">
+                                    <div class="cell round-mt15">买房家庭首次购房</div>
+                                    <div>
+                                        <div class="inbk active2">是</div>
+                                        <div class="inbk">否</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+            <div class="helperPage hide">
+                <div class="model area">
+                    <div class="area list ">
+                        <div class="item">
+                            <div class="row">
+                                <div class="cell">房屋建筑面积</div>
+                                <div>平方</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="cell">房屋总价</div>
+                                <div>万元</div>
+                            </div>
+                        </div>
+                        <div class="item pd20">
+                            <div class="row">
+                                <div class="cell round-mt15">买房家庭首次购房</div>
+                                <div>
+                                    <div class="inbk active2">是</div>
+                                    <div class="inbk">否</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button class="base-btn">计算</button>             
+            </div>
+        </div>
+
+    </div>          
+    <script type="text/javascript">
+    $(function () {
+        document.getElementById('rankPage').style.minHeight = document.documentElement.clientHeight + 'px';
+
+        // 定义公用切换方法
+        var activer = function (els, fn) {
+            $(els).on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                fn(this, $(this).index())
+            })
+        }
+        // 排名类型切换
+        activer('.rank-page .tabs .cell', function (e, i) {
+            console.log(e.innerText, i);
+        });
+
+        $('.inbk').click(function(){
+            $(this).addClass('active2').siblings().removeClass('active2');
+            console.log($(this).index());
+        })
+         var allPage = $('.helperPage');
+            $('.rank-page .tabs .cell').on('click', function () {
+                allPage.hide();
+                allPage.eq($(this).index()).show();
+            });
+        activer('.rank-page .helperMathI .cell', function (e, i) {
+            console.log(e.innerText, i);
+        });
+
+         var allModel2 = $('.model2');
+            $('.rank-page .helperMathI .cell').on('click', function () {
+                allModel2.hide();
+                allModel2.eq($(this).index()).show();
+            });
+        
+    })
+    </script>
+</body>
+</html>

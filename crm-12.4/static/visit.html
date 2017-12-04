@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="visit-page">
+			<div class="area filterList">
+				<div class="tt">客户类型</div>
+				<ul>
+					<li class="active"><i class="a"></i>个人</li>
+					<li><i class="b"></i>对公</li>
+				</ul>
+			</div>
+			<div class="area">
+				<div class="list">
+					<div class="item row">
+						<div class="label">客户编号：</div>
+						<div class="ipt cell">
+							<input type="text" value="" placeholder="请输入客户编号">
+						</div>
+					</div>
+					<div class="item row">
+						<div class="label">客户户名：</div>
+						<div class="ipt cell">
+							<input type="text" value="" placeholder="请输入客户户名">
+						</div>
+					</div>
+					<div class="item row">
+						<div class="label">证件号码：</div>
+						<div class="ipt cell">
+							<input type="text" value="" placeholder="请输入证件号码">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-wrap">
+				<button class="base-btn">搜索</button>
+			</div>
+			<!-- ////////////////////////////////////////////////////////////// -->
+			<div class="btn-wrap">
+				<p class="ft16">查询无结果！</p>
+				<button class="base-btn blue">新客户拜访</button>
+			</div>
+			<!-- ////////////////////////////////////////////////////////////// -->
+			<div class="ta-r fc-yellow refreshBtn"><i class="refresh-ico"></i>换一批</div>
+			<!-- ////////////////////////////////////////////////////////////// -->
+			<div class="customerList">
+				<div class="card type2">
+					<div class="row tt">
+						<div class="cell">
+							<span>高盛文</span>
+							<span class="state">已开户</span>
+						</div>
+						<div>等级：D</div>
+					</div>
+					<div class="row">
+						<div class="cell">客户号：06568949</div>
+						<div class="fc-blue"><i class="to-visit"></i> 继续拜访</div>
+					</div>
+				</div>
+				<div class="card type2">
+						<div class="row tt">
+							<div class="cell">
+								<span>高盛文</span>
+								<span class="state">已开户</span>
+							</div>
+							<div>等级：D</div>
+						</div>
+						<div class="row">
+							<div class="cell">客户号：06568949</div>
+							<div class="fc-blue"><i class="to-visit"></i> 继续拜访</div>
+						</div>
+					</div>
+					<div class="card type2">
+							<div class="row tt">
+								<div class="cell">
+									<span>高盛文</span>
+								</div>
+								<div>等级：D</div>
+							</div>
+							<div class="row">
+								<div class="cell">客户号：06568949</div>
+							</div>
+					</div>
+					<div class="card type2">
+							<div class="row tt">
+								<div class="cell">
+									<span>高盛文</span>
+								</div>
+								<div>等级：D</div>
+							</div>
+							<div class="row">
+								<div class="cell">客户号：06568949</div>
+							</div>
+					</div>
+			</div>
+			<!-- ////////////////////////////////////////////////////////////// -->
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
+			$('.filterList li').on('click', function () {
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+		})
+	</script>
+</body>
+</html>

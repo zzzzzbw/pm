@@ -1,0 +1,35 @@
+.search-page, .visit-page {
+  .filterList {
+    padding: 0.1rem 0.3rem 0.2rem;
+
+    .tt {
+      padding: 0.14rem;
+    }
+
+    li i {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      vertical-align: middle;
+      background: url(../images/search_ico.png) no-repeat 100% 0;
+      background-size: 200% auto;
+      margin: -2px 5px 0 0;
+
+      &.b {
+        background-position: 100% 100%;
+      }
+    }
+
+    li.active i {
+      background-position: 0 0;
+
+      &.b {
+        background-position: 0 100%;
+      }
+    }
+  }
+
+  .list .item .label {
+    padding-right: 0.2rem;
+  }
+}
