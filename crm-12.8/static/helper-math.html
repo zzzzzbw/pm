@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+<!-- <style>
+    .inbk {
+        padding: 0.15rem;
+        font-size: 5px;
+        border-radius: 2px;
+        display: inline-block;
+        background-color: rgba(255,255,255,.2);
+    }
+    .active2{
+        background-color:#6fc2e1;
+    }
+    .mathTip {
+        padding: 0.4rem 0.32rem;
+        opacity: 0.6;
+        font-size: 5px;
+    }
+    .popover {
+        width: 100%;
+      background: -webkit-gradient(linear,100% 0%, 0% 100%, from(#373469), to(#25486B));
+      border-radius: 0.08rem;
+      transition: opacity .3s;
+      height: 0;
+       opacity: 1;
+        overflow: visible;
+        height: auto;
+    }
+    .llTip {
+        background-color: #3b6689;
+    }
+    table {
+        width: 100%;
+    }
+    td {
+        padding: 0.1rem;
+        text-align: center;
+        width: 100px;
+    }
+    .year {
+        width: 4rem;
+        margin: 0 auto;
+        border-radius: 3px;
+        display: none;
+    }
+</style> -->
+</head>
+
+<body>
+
+    <div class="crm-wrap">
+        <div class="rank-page mine-page visit-page company-page" id="rankPage">
+            <div class="row tabs round-mgb20">
+                <div class="cell active">商业贷款</div>
+                <div class="cell ">公积金贷款</div>
+                <div class="cell">组合贷款</div>
+            </div>
+            <div class="model">
+                <div class="area list ">
+                    <div class="item pd32">
+                        <div class="row">
+                            <div class="cell">商贷金额</div>
+                            <div>万</div>
+                        </div>
+                    </div>
+                    <div class="item arr pd32">
+                        <div class="row">
+                            <div class="cell">贷款期限</div>
+                            <div class="fc-blue chose2">请选择年限</div>
+                        </div>
+                    </div>
+                    <div class="item arr pd32">
+                        <div class="row">
+                            <div class="cell">商贷利率</div>
+                            <div class="chose">基准利率*</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="model hide">
+                <div class="area list ">
+                    <div class="item pd32">
+                        <div class="row">
+                            <div class="cell">公积金金额</div>
+                            <div>万</div>
+                        </div>
+                    </div>
+                    <div class="item arr pd32">
+                        <div class="row">
+                            <div class="cell">贷款期限</div>
+                            <div class="fc-blue chose2">10年(120期)</div>
+                        </div>
+                    </div>
+                    <div class="item pd20">
+                        <div class="row">
+                            <div class="cell round-mt15">公积金利率</div>
+                            <div>
+                                <div class="inbk active2">标准利率3.25%</div>
+                                <div class="inbk">1.1倍利率3.58%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="model hide">
+                <div class="area list ">
+                    <div class="item pd32">
+                        <div class="row">
+                            <div class="cell">商贷金额</div>
+                            <div>万</div>
+                        </div>
+                    </div>
+                    <div class="item pd32">
+                        <div class="row">
+                            <div class="cell">公积金金额</div>
+                            <div>万</div>
+                        </div>
+                    </div>
+                    <div class="item arr pd32">
+                        <div class="row">
+                            <div class="cell">贷款期限</div>
+                            <div class="fc-blue chose2">请选择年限</div>
+                        </div>
+                    </div>
+                    <div class="item pd20">
+                        <div class="row">
+                            <div class="cell round-mt15">公积金利率</div>
+                            <div>
+                                <div class="inbk active2">标准利率3.25%</div>
+                                <div class="inbk">1.1倍利率3.58%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item arr pd32">
+                        <div class="row">
+                            <div class="cell">商贷利率</div>
+                            <div>基准利率*<span class="fc-blue chose">85折</span></div>
+                        </div>
+                    </div>
+                   <!--  <div class="mask2"></div>
+                    <div class="popDiv">
+                        <div class="popover area">
+                            <div class="list">
+                                <div class="item pd32">商贷优惠利率</div>
+                                <div class="item pd32">
+                                    <table>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1 llTip">85折</div></td>
+                                            <td><div class="round-pd20-10 bd1">90折</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1">95折</div></td>
+                                            <td><div class="round-pd20-10 bd1">手动输入优惠折扣</div></td>
+                                        </tr>
+                                    </table> 
+                                </div>            
+                            </div>
+                            <div class="list">
+                                <div class="item pd32">商贷优惠利率</div>
+                                <div class="item pd32">
+                                    <table>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1 llTip">基准利率</div></td>
+                                            <td><div class="round-pd20-10 bd1">1.1倍</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1">1.2倍</div></td>
+                                            <td><div class="round-pd20-10 bd1">手动输入上浮倍数</div></td>
+                                        </tr>
+                                    </table>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popDiv pd200">
+                        <div class="year area">
+                            <div class="list">
+                                <div class="item pd32">贷款年限</div>
+                                <div class="item pd32 whitchYear fc-blue">10年(120期)</div>
+                                <div class="item pd32 whitchYear">15年(180期)</div>
+                                <div class="item pd32 whitchYear">20年(240期)</div>
+                                <div class="item pd32 whitchYear">25年(300期)</div>
+                                <div class="item pd32 whitchYear">30年(360期)</div>
+                            </div>
+                        </div>
+                    </div>     -->
+                </div>
+            </div>
+            <div class="mask2"></div>
+            <div class="popDiv">
+                        <div class="popover area">
+                            <div class="list">
+                                <div class="item pd32">商贷优惠利率</div>
+                                <div class="item pd32">
+                                    <table>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1 llTip">85折</div></td>
+                                            <td><div class="round-pd20-10 bd1">90折</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1">95折</div></td>
+                                            <td><div class="round-pd20-10 bd1">手动输入优惠折扣</div></td>
+                                        </tr>
+                                    </table> 
+                                </div>            
+                            </div>
+                            <div class="list">
+                                <div class="item pd32">商贷优惠利率</div>
+                                <div class="item pd32">
+                                    <table>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1 llTip">基准利率</div></td>
+                                            <td><div class="round-pd20-10 bd1">1.1倍</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="round-pd20-10 bd1">1.2倍</div></td>
+                                            <td><div class="round-pd20-10 bd1">手动输入上浮倍数</div></td>
+                                        </tr>
+                                    </table>
+                                </div>  
+                            </div>
+                        </div>
+            </div>
+            <div class="popDiv pd200">
+                <div class="year area">
+                    <div class="list">
+                        <div class="item pd32">贷款年限</div>
+                        <div class="item pd32 whitchYear fc-blue">10年(120期)</div>
+                        <div class="item pd32 whitchYear">15年(180期)</div>
+                        <div class="item pd32 whitchYear">20年(240期)</div>
+                        <div class="item pd32 whitchYear">25年(300期)</div>
+                        <div class="item pd32 whitchYear">30年(360期)</div>
+                    </div>
+                </div>
+            </div>   
+            <div class="mathTip">2017年11月24日最新商贷利率4.9%，公积金利率3.25%</div>
+            <div class="btn-wrap">
+                <button class="base-btn">计算</button>             
+            </div>
+        </div>
+
+    </div>          
+    <script type="text/javascript">
+    $(function () {
+        document.getElementById('rankPage').style.minHeight = document.documentElement.clientHeight + 'px';
+
+        // 定义公用切换方法
+        var activer = function (els, fn) {
+            $(els).on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                fn(this, $(this).index())
+            })
+        }
+        // 排名类型切换
+        activer('.rank-page .tabs .cell', function (e, i) {
+            console.log(e.innerText, i);
+        });
+
+        $('.inbk').click(function(){
+            $(this).addClass('active2').siblings().removeClass('active2');
+            console.log($(this).index());
+        })
+         var allModel = $('.model');
+            $('.rank-page .tabs .cell').on('click', function () {
+                allModel.hide();
+                allModel.eq($(this).index()).show();
+            });
+        $('.chose').on('click',function(event){
+            event.stopPropagation();
+            $('.mask2').toggle();
+            $('.popover').show();
+        })
+        
+        $('.mask2').click(function(){
+            $(".mask2,.popover,.year").hide();
+        });
+        $("table div").click(function(){
+            $(this).parents("table").find("div").removeClass("llTip");
+            $(this).addClass("llTip");
+        });
+        //年限弹窗
+         $('.chose2').on('click',function(event){
+            event.stopPropagation();
+            $('.mask2').toggle();
+            $('.year').show();
+        });
+        $(".year .whitchYear").click(function(event){
+            event.stopPropagation();
+            $(this).addClass('fc-blue').siblings().removeClass('fc-blue');
+            console.log($(this).index());
+        });
+
+    })
+    </script>
+</body>
+</html>

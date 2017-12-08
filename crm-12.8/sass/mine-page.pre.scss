@@ -1,0 +1,260 @@
+.mine-page {
+  
+  .list {
+    .item {
+      padding: 0.32rem 0.32rem 0.32rem 0.86rem;
+      .num {
+        position:absolute;
+        left:3.7rem;
+      }
+
+      i {
+        display: block;
+        height: 0.44rem;
+        width: 0.4rem;
+        background: url(../images/user_ico.png) no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        left: 0.3rem;
+        top: 50%;
+        margin-top: -0.22rem;
+
+        &.b {
+          background-position: 0 11.1111%;
+        }
+
+        &.c {
+          background-position: 0 22.2222%;
+        }
+
+        &.d {
+          background-position: 0 33.3333%;
+        }
+
+        &.e {
+          background-position: 0 44.4444%;
+        }
+
+        &.f {
+          background-position: 0 55.5555%;
+        }
+
+        &.g {
+          background-position: 0 66.6666%;
+        }
+
+        &.h {
+          background-position: 0 77.9%;
+        }
+
+        &.i {
+          background-position: 0 88.8888%;
+        }
+
+        &.j {
+          background-position: 0 100%;
+        }
+      }
+
+      .grpTitle {
+        position: relative;
+      }
+
+      .rangeMount {
+        margin-top: 0.1rem;
+
+        .label {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .rangeInput {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .list.sub {
+        .item {
+          padding: 0.16rem 0.6rem 0.16rem 0;
+          border: none;
+
+          &.arr:after {
+            right: 0;
+          }
+        }
+      }
+    }
+    .pd32 {
+      padding: 0.3rem;
+    }
+    .pd20 {
+      padding:0.2rem 0.3rem;
+    }
+  }
+
+  .list2 {
+     .item2 {
+      padding: 0.32rem 0.32rem 0.32rem 0.86rem;
+     }
+     .sdf{
+      position:absolute;
+      left:-0.63rem;
+     }
+     .btn1 {
+      width: 1rem;
+      height: 0.5rem;
+      background-color:#3d3965;
+      border-radius: 4px 4px 4px 4px;
+      color:#ffffff;
+      line-height: 0.5rem;
+      opacity:0.8;
+      position: absolute;
+      right: 0rem;
+     }
+
+      .btn2 {
+        height: 0.5rem;
+        color:#ffffff;
+        text-align:center;
+        position: relative;
+        top: 0.26rem;
+        left: -0.35rem;
+        line-height: 0.5rem;
+        opacity:0.8;
+      }
+      
+      .lianDong {
+        background: url(../images/fold_white.png) no-repeat;
+        height: 0.36rem;
+        width: 0.5rem;
+        background-size: 70% auto;
+        transform:rotate(-90deg);
+        position:relative;
+        top:0.25rem;
+
+
+      }
+
+      .adjust {
+       position: relative;
+       // top: 0.15rem;
+
+      }
+
+      i {
+        display: block;
+        height: 0.5rem;
+        width: 0.5rem;
+        background: url(../images/active_icon.png) no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        left: 0.2rem;
+        top: 55%;
+        margin-top: -0.3rem;
+
+        &.b {
+          background-position: 0 11.111111%;
+        }
+
+        &.c {
+          background-position: 0 22.222222%;
+        }
+
+        &.d {
+          background-position: 0 33.333333%;
+        }
+
+        &.e {
+          background-position: 0 44.444444%;
+        }
+      }
+  }
+
+  .quitBtn {
+    margin: 0.4rem 0;
+  }
+
+  .ticketList {
+    .item {
+      padding: 0.32rem 0.32rem 0.32rem 0.86rem;
+
+      .num {
+        position:absolute;
+        left:3.7rem;
+      }
+
+      i {
+        background-image: url(../images/ticket.png);
+      }
+
+      .grpTitle {
+        position: relative;
+      }
+
+      .rangeMount {
+        margin-top: 0.1rem;
+
+        .label {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .rangeInput {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .list.sub {
+        .item {
+          padding: 0.16rem 0.6rem 0.16rem 0;
+          border: none;
+
+          &.arr:after {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mine-page, .visit-page {
+  .area.user {
+    padding: 0.4rem 0 0.4rem 1.8rem;
+
+    .base {
+      color: #77e1fa;
+      font-size: 16px;
+      margin-bottom: 0.2rem;
+
+      .sex {
+        &:before {
+          content: "";
+          display: inline-block;
+          height: 0.32rem;
+          width: 0.32rem;
+          background: url(../images/sex.png) no-repeat;
+          background-size: 100% auto;
+          margin-right: 0.05rem;
+          vertical-align: middle;
+          margin-top: -2px;
+        }
+
+        &.female {
+          color: #f35cb0;
+          
+          &:before {
+            background-position: 0 100%;
+          }
+        }
+      }
+
+      .name {
+        margin-right: 0.2rem;
+        
+      }
+    }
+  }
+}

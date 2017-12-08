@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="task-page">
+			<div class="tabFixedWrap">
+				<div class="row tabs">
+					<div class="cell active">业务信息</div>
+					<div class="cell">网点信息</div>
+				</div>
+			</div>
+			<div class="switch-content">
+				<div class="switch-item round-pd20" style="display: block;">
+					<div class="crm-table">
+						<table>
+							<thead>
+								<tr>
+									<th>指标</th>
+									<th>金额(万元)</th>
+									<th>完成比例</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>一般存款<br/>新增日均</td>
+									<td>28,896.00</td>
+									<td>20.654%</td>
+								</tr>
+								<tr>
+									<td>一般存款<br/>新增日均</td>
+									<td>28,896.00</td>
+									<td>20.654%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="round-pd20 ta-c">图示：我的任务</div>
+					<div class="crm-table">
+						<table>
+								<thead>
+									<tr>
+										<th>指标</th>
+										<th>余额(万元)</th>
+										<th>比上日(万元)</th>
+										<th>比上年(万元)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>存款日均</td>
+										<td>28,896.00</td>
+										<td>+20.654</td>
+										<td>-645</td>
+									</tr>
+									<tr>
+										<td>存款日均</td>
+										<td>28,896.00</td>
+										<td>+20.654</td>
+										<td>-645</td>
+									</tr>
+									<tr>
+										<td>存款日均</td>
+										<td>28,896.00</td>
+										<td>+20.654</td>
+										<td>-645</td>
+									</tr>
+									<tr>
+										<td>存款日均</td>
+										<td>28,896.00</td>
+										<td>+20.654</td>
+										<td>-645</td>
+									</tr>
+									<tr>
+										<td>存款日均</td>
+										<td>28,896.00</td>
+										<td>+20.654</td>
+										<td>-645</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<div class="round-pd20 ta-c">图示：指标明细</div>
+				</div>
+				<div class="switch-item round-pd20">
+					<div class="bank-list">
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+						<div class="item">温岭支行</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
+			var allItem = $('.switch-content .switch-item');
+			$('.task-page .tabs .cell').on('click', function () {
+				$(this).addClass('active').siblings().removeClass('active');
+				allItem.hide();
+				allItem.eq($(this).index()).show();
+			});
+		})
+	</script>
+</body>
+</html>

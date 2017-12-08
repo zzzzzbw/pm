@@ -1,0 +1,33 @@
+$fcBlue: #7de6ff;
+$yellow: #fee47a;
+$bgBlue: rgba(125, 230, 255, 0.2);
+
+@mixin bgWhiteOpacity($opacity) {
+  background-color: rgba(255, 255, 255, $opacity / 100);
+}
+
+@mixin bgYellowOpacity($opacity) {
+  background-color: rgba(254, 228, 122, $opacity / 100);
+}
+
+@mixin bgBlueOpacity($opacity) {
+  background-color: rgba(119, 225, 250, $opacity / 100);
+}
+
+@mixin bgPurpleOpacity($opacity) {
+  background-color: rgba(138, 149, 255, $opacity / 100);
+}
+
+@mixin opacityBorder($dir, $opacity) {
+  @if $dir == all {
+    border: 1px solid rgba(255, 255, 255, $opacity / 100);
+  } @else {
+    border-#{$dir}: 1px solid rgba(255, 255, 255, $opacity / 100);
+  }
+}
+
+@mixin textEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

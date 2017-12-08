@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/echarts.simple.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+</head>
+
+<body>
+	<div class="crm-wrap">
+		<div class="info-page">
+			<div class="userItemsPanel">
+				<div class="tt row">
+					<div class="cell">
+						<i class="proIco d"></i><span>稳盈138期42天</span>
+					</div>
+					<div class="level"><i class="lnkIco"></i></div>
+				</div>
+				<div class="row cnt">
+					<div class="cell">
+						<div class="ft12 fc-light-dark">产品期限</div>
+						<div class="ft18">42天</div>
+					</div>
+					<div class="cell">
+						<div class="ft12 fc-light-dark">起购金额</div>
+						<div class="ft18 lh20">5万元 <i class="amazeIco"></i></div>
+						<!-- *************************************************** -->
+						<div class="product-tips">
+                            <div class="em"></div>
+							<p>万元的整数倍追加</p>						 
+						</div>
+					</div>
+					<div>
+						<div class="ft12 fc-light-dark">风险程度</div>
+						<div class="ft18 lh20">R1</div>
+					</div>
+				</div>
+			</div>
+			<div class="area mayLike">
+				<div class="tt">产品周期</div>
+				<div class="detailCnt">
+					<div class="cycle step2">
+						<div class="line">
+							<i class="point">
+								<div class="t">起售</div>
+								<div class="t">09-23</div>
+							</i>
+							<i class="point">
+								<div class="t">截止</div>
+								<div class="t">10-09</div>
+							</i>
+							<i class="point">
+								<div class="t">起息</div>
+								<div class="t">10-10</div>
+							</i>
+							<i class="point">
+								<div class="t">到期</div>
+								<div class="t">11-09</div>
+							</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- **************************************** -->
+			<div class="area mayLike">
+				<div class="tt">预期年化收益率</div>
+				<div class="detailCnt">
+					<div class="detailTbl">
+						<table class="fullTable">
+							<tr>
+								<td>a-b(万)</td>
+								<td class="elmRight">4.65%</td>
+							</tr>
+							<tr>
+								<td>b-c(万)</td>
+								<td class="elmRight">4.75%</td>
+							</tr>
+							<tr>
+								<td>c(万)以上</td>
+								<td class="elmRight">4.90%</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="area mayLike">
+				<div class="tt">营销亮点</div>
+				<div class="detailCnt">
+					<div class="detailTbl">
+						<table>
+							<tr>
+								<td>目标客户：</td>
+								<td>普通客户</td>
+							</tr>
+							<tr>
+								<td>办理渠道：</td>
+								<td>线上预约线下办理</td>
+							</tr>
+							<tr>
+								<td>产品特点：</td>
+								<td>安全性高、流动性强、可提前支取</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="area mayLike">
+				<div class="tt">产品细则</div>
+				<div class="detailCnt">
+					<div class="detailTbl">
+						<table>
+							<tr>
+								<td>产品编号：</td>
+								<td>360RT5639878</td>
+							</tr>
+							<tr>
+								<td>细则详述：</td>
+								<td>线上预约线下办理</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function () {
+        $(".amazeIco").click(function(event){
+        	 event.stopPropagation();
+        	 $(".product-tips").toggle();      	 
+        });
+        $(document).click(function(){
+                    $(".product-tips").hide();
+        });
+        	
+    });
+
+	</script>
+</body>
+</html>

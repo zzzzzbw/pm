@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<title>CRM2.0</title>
+<script src="../js/init.min.js"></script>
+<link rel="stylesheet" href="../css/reset.min.css">
+<link rel="stylesheet" href="../css/main.dev.css">
+<script src="../js/jquery.min.js"></script>
+<!-- <style>
+  i {
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: url(../images/calendar.png) no-repeat;
+    background-size: 100% auto;
+  }
+</style>
+ --></head>
+
+<body>
+  <div class="crm-wrap">
+    <div class="rank-page company-page">
+
+      <div class="customerList goldIco">
+        <div class="row" style="padding:.1rem 0 .2rem 0;">
+          <div class="cell"><i class="a"></i>&nbsp 当前时间:&nbsp 2017年12月</div>
+          <div><i class="b"></i></div>
+        </div>
+        <div class="opacity21 txtMid item round-pd10 card">
+          <div class="fc-yellow ft30 round-pd10">168,236.00 <span class="ft12">元</span> </div>
+          <div class="ft15 round-pd10"><i class="c"></i>总共奖金</div>
+          <div class="fc-txt ft10 round-pd10">注:数据为系统计算结果，实际以分行发行为准</div>
+        </div>
+        <div class="card">
+          <div class="row tt">
+            <div class="cell">FTP净收入基金奖</div>
+            <div class="fc-yellow">100.000.00(元) <span class="dsj"></span></div>
+          </div>
+          <div class="round-pd24" style="display: none;">100.000.00*2%=2000(元)</div>
+        </div>
+        <div class="card">
+          <div class="row tt">
+            <div class="cell">FTP净收入基金奖</div>
+            <div class="fc-yellow">100.000.00(元) <span class="dsj"></span></div>
+          </div>
+          <div style="display: none; padding-bottom: 0.24rem;">
+          <div class="round-pd24 txtMid">十万元以下</div>
+          <div class="round-mg10">
+            <div class="row">
+              <div class="cell">签约数</div>
+              <div class="cell txtMid">0*20=0</div>
+            </div>
+            <div class="row">
+              <div class="cell">激活数</div>
+              <div class="cell txtMid">0*10=0</div>
+            </div>
+            <div class="row">
+              <div class="cell">非循环客户</div>
+              <div class="cell txtMid">0*30=0</div>
+            </div>
+          </div>
+          <div class="round-pd24 txtMid">十万元以上</div>
+          <div class="round-mg10">
+            <div class="row">
+              <div class="cell">签约数</div>
+              <div class="cell txtMid">2*20=40</div>
+            </div>
+            <div class="row">
+              <div class="cell">激活数</div>
+              <div class="cell txtMid">3*10=30</div>
+            </div>
+            <div class="row">
+              <div class="cell">非循环客户</div>
+              <div class="cell txtMid">4*30=120</div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="row tt">
+            <div class="cell">存量客户管户奖</div>
+            <div class="fc-yellow">100.000.00(元) <span class="dsj"></span></div>
+          </div>
+          <div class="round-pd24" style="display: none;">100.000.00*2%=2000(元)</div>
+        </div>
+        <div class="card">
+          <div class="row tt">
+            <div class="cell">存款规模加价奖</div>
+            <div class="fc-yellow">100.000.00(元) <span class="dsj"></span></div>
+          </div>
+          <div class="round-pd24" style="display: none;">100.000.00*2%=2000(元)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $("span.dsj").each(function(index){
+             $(this).click(function(){
+                $(this).parents("div.row").next("div").slideToggle(100);
+     })
+    })
+    $("span.dsj").click(function(){
+       if ($(this).hasClass('zsj')){
+        $(this).removeClass('zsj');
+       } else {
+        $(this).addClass('zsj');
+       }
+    });
+  </script>
+</body>
+</html>
